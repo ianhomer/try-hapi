@@ -1,6 +1,6 @@
 'use strict';
 
-const Hapi = require('hapi');
+const Hapi = require('hapi')
 
 const server = Hapi.Server({
     host: 'localhost',
@@ -10,17 +10,17 @@ const server = Hapi.Server({
 server.route({
     method: 'GET',
     path: '/',
-    handler: (request, h) => {
-        return 'Hello, world!';
+    handler: () => {
+        return 'Hello, world!'
     }
 });
 
 server.route({
     method: 'GET',
     path: '/dynamic/{name}',
-    handler: (request, h) => {
-        return 'Hello, ' + encodeURIComponent(request.params.name) + '!';
+    handler: (request) => {
+        return 'Hello, ' + encodeURIComponent(request.params.name) + '!'
     }
 });
 
-module.exports = server;
+module.exports = server
