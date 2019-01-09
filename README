@@ -5,7 +5,7 @@ Try Hapi
 Run with
 
     npm install
-    node server.js
+    node index.js
 
 Test with
 

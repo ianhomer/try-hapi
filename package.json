@@ -4,7 +4,7 @@
   "description": "Try Hapi",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --exit"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -17,13 +17,9 @@
   },
   "homepage": "https://github.com/ianhomer/try-hapi#readme",
   "dependencies": {
-    "hapi": "^16.4.3",
-    "joi": "^13.1.0",
-    "monk": "^6.0.5"
+    "hapi": "^17.8.1"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "inject-then": "^2.0.9",
     "mocha": "^4.1.0"
   }
 }

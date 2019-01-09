@@ -2,30 +2,25 @@
 
 const Hapi = require('hapi');
 
-const server = new Hapi.Server()
-server.connection({
-    host:'localhost',
+const server = Hapi.Server({
+    host: 'localhost',
     port: 3000
 });
 
 server.route({
     method: 'GET',
     path: '/',
-    handler: (request, response) => {
-        return response('Hello, world!');
+    handler: (request, h) => {
+        return 'Hello, world!';
     }
 });
 
 server.route({
     method: 'GET',
-    path: '/{name}',
-    handler: (request, response) => {
-        return response('Hello, ' + encodeURIComponent(request.params.name) + '!');
+    path: '/dynamic/{name}',
+    handler: (request, h) => {
+        return 'Hello, ' + encodeURIComponent(request.params.name) + '!';
     }
 });
-
-server.start((err)=>{
-    if (err) console.log('error while connecting :'+err)
-})
 
 module.exports = server;

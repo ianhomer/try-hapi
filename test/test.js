@@ -1,20 +1,15 @@
-const assert = require('chai').assert;
+const assert = require('assert');
 const server = require('../server.js');
 
-server.register([{
-    register: require('inject-then')
-}])
-
 describe('Server', function () {
-    it('should validate server running', function () {
-        return server.injectThen({
-            method: 'GET',
-            url: '/'
-        })
-            .then(
-                function (response) {
-                    assert.deepEqual(response.statusCode, 200);
-                }
-            )
+    it('should default page be OK', async () => {
+        const response = await server.inject('/')
+        assert.deepStrictEqual(200, response.statusCode)
+        assert.deepStrictEqual('Hello, world!', response.payload)
+    })
+
+    it('should unknown page be not found', async () => {
+        const response = await server.inject('/not-found')
+        assert.deepStrictEqual(404, response.statusCode)
     })
 })
