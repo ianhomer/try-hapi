@@ -1,9 +1,7 @@
-const hello = {
+module.exports = {
     method: 'GET',
     path: '/',
     handler: () => {
         return 'Hello, world!'
     }
 }
-
-module.exports = hello
