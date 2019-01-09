@@ -1,5 +1,5 @@
 const expect = require('chai').expect
-const server = require('../server.js')
+const server = require('../src/server.js')
 
 describe('Server', () => {
     it('should default page be OK', async () => {
