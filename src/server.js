@@ -1,26 +1,13 @@
 'use strict';
 
 const Hapi = require('hapi')
+const routes = require('./routes');
 
 const server = Hapi.Server({
     host: 'localhost',
     port: 3000
 });
 
-server.route({
-    method: 'GET',
-    path: '/',
-    handler: () => {
-        return 'Hello, world!'
-    }
-});
-
-server.route({
-    method: 'GET',
-    path: '/dynamic/{name}',
-    handler: (request) => {
-        return 'Hello, ' + encodeURIComponent(request.params.name) + '!'
-    }
-});
+server.route(routes);
 
 module.exports = server
