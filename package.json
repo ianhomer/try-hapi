@@ -21,6 +21,6 @@
     "hapi": "^17.8.1"
   },
   "devDependencies": {
-    "mocha": "^4.1.0"
+    "mocha": "^5.2.0"
   }
 }
