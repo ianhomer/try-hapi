@@ -2,39 +2,30 @@
 
 const Hapi = require('hapi');
 
-const server = Hapi.server({
-    port: 3000,
-    host: 'localhost'
+const server = new Hapi.Server()
+server.connection({
+    host:'localhost',
+    port: 3000
 });
 
 server.route({
     method: 'GET',
     path: '/',
-    handler: (request, h) => {
-
-        return 'Hello, world!';
+    handler: (request, response) => {
+        return response('Hello, world!');
     }
 });
 
 server.route({
     method: 'GET',
     path: '/{name}',
-    handler: (request, h) => {
-
-        return 'Hello, ' + encodeURIComponent(request.params.name) + '!';
+    handler: (request, response) => {
+        return response('Hello, ' + encodeURIComponent(request.params.name) + '!');
     }
 });
 
-const init = async () => {
+server.start((err)=>{
+    if (err) console.log('error while connecting :'+err)
+})
 
-    await server.start();
-    console.log(`Server running at: ${server.info.uri}`);
-};
-
-process.on('unhandledRejection', (err) => {
-
-    console.log(err);
-    process.exit(1);
-});
-
-init();
+module.exports = server;

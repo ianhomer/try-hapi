@@ -1,1 +1,12 @@
 Try Hapi
+
+# TL;DR
+
+Run with
+
+    npm install
+    node server.js
+
+Test with
+
+    npm test
