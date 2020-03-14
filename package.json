@@ -20,7 +20,7 @@
   "dependencies": {
     "@types/chai": "^4.1.7",
     "chai": "^4.2.0",
-    "handlebars": "^4.0.12",
+    "handlebars": "^4.3.0",
     "hapi": "^17.8.1"
   },
   "devDependencies": {
