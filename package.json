@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "mocha",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "update": "npx npm-check-updates -u && npm install --package-lock-only --no-audit"
   },
   "repository": {
     "type": "git",
