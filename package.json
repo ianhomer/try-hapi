@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/ianhomer/try-hapi#readme",
   "dependencies": {
-    "@types/chai": "^4.2.12",
+    "@types/chai": "^4.2.13",
     "chai": "^4.2.0",
     "handlebars": "^4.7.6",
     "hapi": "^18.1.0"
