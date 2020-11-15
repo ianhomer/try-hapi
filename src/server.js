@@ -1,13 +1,13 @@
-'use strict';
+"use strict";
 
-const Hapi = require('hapi')
-const routes = require('./routes');
+const Hapi = require("hapi");
+const routes = require("./routes");
 
 const server = Hapi.Server({
-    host: 'localhost',
-    port: 3000
+  host: "localhost",
+  port: 3000,
 });
 
 server.route(routes);
 
-module.exports = server
+module.exports = server;

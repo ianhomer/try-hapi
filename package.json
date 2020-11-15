@@ -2,30 +2,35 @@
   "name": "try-hapi",
   "version": "1.0.0",
   "description": "Try Hapi",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "mocha",
-    "start": "node src/index.js",
-    "update": "npx npm-check-updates -u && npm install --package-lock-only --no-audit"
-  },
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ianhomer/try-hapi.git"
   },
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/ianhomer/try-hapi/issues"
   },
   "homepage": "https://github.com/ianhomer/try-hapi#readme",
+  "author": "",
+  "main": "src/index.js",
+  "scripts": {
+    "format:pkg": "format-package -w",
+    "prettier": "npx prettier --check .",
+    "prettier:fix": "npx prettier --write .",
+    "start": "node src/index.js",
+    "test": "mocha",
+    "update": "npx npm-check-updates -u && npm install --package-lock-only --no-audit"
+  },
   "dependencies": {
-    "@types/chai": "^4.2.14",
-    "chai": "^4.2.0",
     "handlebars": "^4.7.6",
     "hapi": "^18.1.0"
   },
   "devDependencies": {
+    "@types/chai": "^4.2.14",
+    "chai": "^4.2.0",
+    "format-package": "^6.1.0",
+    "minimist": ">=1.2.5",
     "mocha": "^8.2.1",
-    "minimist": ">=1.2.5"
+    "prettier": "^2.1.2"
   }
 }

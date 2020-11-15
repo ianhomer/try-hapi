@@ -1,15 +1,15 @@
-const expect = require('chai').expect
-const server = require('../src/server.js')
+const expect = require("chai").expect;
+const server = require("../src/server.js");
 
-describe('Hello', () => {
-    it('should default page be OK', async () => {
-        const response = await server.inject('/')
-        expect(response.statusCode).to.equal(200)
-        expect(response.payload).to.equal('Hello, world!')
-    })
+describe("Hello", () => {
+  it("should default page be OK", async () => {
+    const response = await server.inject("/");
+    expect(response.statusCode).to.equal(200);
+    expect(response.payload).to.equal("Hello, world!");
+  });
 
-    it('should unknown page be not found', async () => {
-        const response = await server.inject('/not-found')
-        expect(response.statusCode).to.equal(404)
-    })
-})
+  it("should unknown page be not found", async () => {
+    const response = await server.inject("/not-found");
+    expect(response.statusCode).to.equal(404);
+  });
+});
