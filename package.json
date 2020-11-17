@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "handlebars": "^4.7.6",
-    "hapi": "^18.1.0"
+    "@hapi/hapi": "^20.0.2"
   },
   "devDependencies": {
     "@types/chai": "^4.2.14",
