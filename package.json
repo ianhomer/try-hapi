@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "handlebars": "^4.7.6",
-    "@hapi/hapi": "^20.0.2"
+    "@hapi/hapi": "^20.0.3"
   },
   "devDependencies": {
     "@types/chai": "^4.2.14",
@@ -31,6 +31,6 @@
     "format-package": "^6.1.0",
     "minimist": ">=1.2.5",
     "mocha": "^8.2.1",
-    "prettier": "^2.2.0"
+    "prettier": "^2.2.1"
   }
 }
