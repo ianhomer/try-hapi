@@ -22,7 +22,7 @@
     "update": "npx npm-check-updates -u && npm install --package-lock-only --no-audit"
   },
   "dependencies": {
-    "handlebars": "^4.7.6",
+    "handlebars": "^4.7.7",
     "@hapi/hapi": "^20.1.0"
   },
   "devDependencies": {
