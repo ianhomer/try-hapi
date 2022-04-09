@@ -29,7 +29,7 @@
     "@types/chai": "^4.2.14",
     "chai": "^4.2.0",
     "format-package": "^6.1.0",
-    "minimist": ">=1.2.5",
+    "minimist": ">=1.2.6",
     "mocha": "^8.2.1",
     "prettier": "^2.2.1"
   }
